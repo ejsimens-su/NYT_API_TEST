@@ -1,0 +1,13 @@
+// Built by LucyBot. www.lucybot.com
+var url = "https://api.nytimes.com/svc/topstories/v2/home.json";
+url += '?' + $.param({
+  'api-key': "8cd5c833d86e41afb4976a1b957298e9"
+});
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+  console.log(result);
+}).fail(function(err) {
+  throw err;
+});
